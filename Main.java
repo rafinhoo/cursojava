@@ -6,6 +6,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		
+		// ESTRUTURA SEQUENCIAL //
+		
 		//QUESTAO 1 - Faça um programa para ler o valor do raio de um círculo, e depois mostrar o valor da área deste círculo com quatro// 
 		//casas decimais conforme exemplos. Fórmula da área: area = π . raio2 Considere o valor de π = 3.14159//
 
@@ -126,6 +128,129 @@ public class Main {
 		
 		
 		sc.close();
+		
+		
+		---------------------------------------------------------------------------------*/
+		
+		// ESTRUTURA CONDICIONAL //
+		
+		//QUESTAO 1 - Fazer um programa para ler um número inteiro, e depois dizer se este número é negativo ou não. //
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		int A;
+		
+		System.out.println("Digite o valor de A: ");
+		A = sc.nextInt();
+		
+		if (A < 0) {
+			System.out.println("Este numero eh negativo");
+		} 
+			else System.out.println("Numero positivo");
+		
+		
+		sc.close();
+
+		//QUESTAO 2 - Fazer um programa para ler um número inteiro e dizer se este número é par ou ímpar.//
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int A, Par;
+		
+		System.out.println("Digite o valor de A: ");
+		A = sc.nextInt();
+		
+		Par = A * A;
+		
+		if (Par % 2==0) {
+			System.out.println("Este numero eh par");
+		}
+		
+		else {
+			System.out.println("Este numero eh impar");
+		}
+		
+		sc.close();
+		
+		// QUESTAO 3 - Leia 2 valores inteiros (A e B). Após, o programa deve mostrar uma mensagem "Sao Multiplos" ou "Nao sao//
+		//Multiplos", indicando se os valores lidos são múltiplos entre si. Atenção: os números devem poder ser digitados em//
+		//ordem crescente ou decrescente.//
+
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int A, B;
+		
+		System.out.println("Digite o valor de A");
+		A = sc.nextInt();
+		System.out.println("Digite o valor de B");
+		B = sc.nextInt();
+		
+		if (A % B == 0 || B % A == 0) {
+			System.out.println("Sao Multiplos");
+		}
+		else {
+			System.out.println("Nao sao Multiplos");
+		}
+		
+		sc.close();
+		
+		//QUESTAO 4 - Leia a hora inicial e a hora final de um jogo. A seguir calcule a duração do jogo, sabendo que o mesmo pode//
+		//começar em um dia e terminar em outro, tendo uma duração mínima de 1 hora e máxima de 24 horas//
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int DuracaoTotal, HoraInicial, HoraTermino;
+		
+		System.out.println("Digite a hora do inicio: ");
+		HoraInicial = sc.nextInt();
+		System.out.println("Digite a hora que terminou");
+		HoraTermino = sc.nextInt();
+		
+		if (HoraInicial < HoraTermino) {
+			DuracaoTotal = HoraTermino - HoraInicial;
+		}
+		else {
+			DuracaoTotal = 24 - HoraInicial + HoraTermino;
+		}
+		
+		System.out.println("O JOGO DUROU " + DuracaoTotal + " HORA(S)");
+		
+		sc.close();
+		
+		//QUESTAO 5 - Com base na tabela abaixo, escreva um programa que leia o código de um item e a quantidade deste item. A//
+		//seguir, calcule e mostre o valor da conta a pagar.//
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite seu pedido");
+		int codigo = sc.nextInt();
+		System.out.println("Digite a quantidade");
+		int quantidade = sc.nextInt();
+		
+	
+		double total;
+		if (codigo == 1) {
+			total = quantidade * 4.0;
+		}
+		else if (codigo == 2) {
+			total = quantidade * 4.5;
+		}
+		else if (codigo == 3) {
+			total = quantidade * 5.0;
+		}
+		else if (codigo == 4) {
+			total = quantidade * 2.0;
+		}
+		else {
+			total = quantidade * 1.5;
+		}
+
+		System.out.printf("Total: R$ %.2f%n", total);
+		
+		sc.close();
+		
 	}
 
 }
