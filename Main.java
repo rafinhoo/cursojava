@@ -6,7 +6,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		// ESTRUTURA SEQUENCIAL //
+		 // ESTRUTURA SEQUENCIAL //
 		
 		//QUESTAO 1 - Faça um programa para ler o valor do raio de um círculo, e depois mostrar o valor da área deste círculo com quatro// 
 		//casas decimais conforme exemplos. Fórmula da área: area = π . raio2 Considere o valor de π = 3.14159//
@@ -130,7 +130,7 @@ public class Main {
 		sc.close();
 		
 		
-		---------------------------------------------------------------------------------*/
+		---------------------------------------------------------------------------------
 		
 		// ESTRUTURA CONDICIONAL //
 		
@@ -248,6 +248,109 @@ public class Main {
 		}
 
 		System.out.printf("Total: R$ %.2f%n", total);
+		
+		sc.close();
+		
+		// QUESTAO 6 - Você deve fazer um programa que leia um valor qualquer e apresente uma mensagem dizendo em qual dos
+		//seguintes intervalos ([0,25], (25,50], (50,75], (75,100]) este valor se encontra. Obviamente se o valor não estiver em
+		// nenhum destes intervalos, deverá ser impressa a mensagem “Fora de intervalo”.
+		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite o seu valor");
+		int valor = sc.nextInt();
+		
+		if (valor <= 25) {
+			System.out.println("o seu valor ta entre 0 e 25");
+		}
+		else if (valor <= 50) {
+			System.out.println(" o seu valor ta entre 25 e 50");
+		}
+		else if (valor <= 75) {
+			System.out.println("o seu valor ta entre 50 e 75");
+		}
+		else if (valor <= 100) {
+			System.out.println("o seu valor ta entre 75 e 100");
+		}
+		else if (valor < 0 || valor > 100) {
+			System.out.println("Fora de intervalo");
+			
+		}
+			
+			
+		sc.close();
+		
+		//QUESTAO 7 - Leia 2 valores com uma casa decimal (x e y), que devem representar as coordenadas
+		//de um ponto em um plano. A seguir, determine qual o quadrante ao qual pertence o
+		//ponto, ou se está sobre um dos eixos cartesianos ou na origem (x = y = 0).
+		//Se o ponto estiver na origem, escreva a mensagem “Origem”.
+		//Se o ponto estiver sobre um dos eixos escreva “Eixo X” ou “Eixo Y”, conforme for a situação
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		System.out.println("Escreva sua coordenada X");
+		double X = sc.nextDouble();
+		System.out.println("Escreva sua coordenada Y");
+		double Y = sc.nextDouble();
+		
+		if (X == 0 && Y == 0) {
+			System.out.println("O ponto ta na origem");
+		}
+		else if (X > 0 && Y > 0) {
+			System.out.println("O ponto ta no 1 quadrante");
+		}
+		else if (X < 0 && Y > 0) {
+			System.out.println("O ponto ta no 2 quadrante");
+		}
+		else if (X < 0 && Y < 0) {
+			System.out.println("O ponto ta no 3 quadrante");
+		}
+		else if (X > 0 && Y < 0) {
+			System.out.println("O ponto ta no 4 quadrante");
+		}
+		else if (X == 0) {
+			System.out.println("O ponto ta no eixo da abscissa");
+		}
+		else if (Y == 0) {
+			System.out.println("O ponto ta no eixo da ordenada");
+		}
+		
+		sc.close();
+		
+		// QUESTAO 8 - Leia um valor com duas casas decimais, equivalente ao salário de uma pessoa de Lisarb. Em seguida, calcule e
+		//mostre o valor que esta pessoa deve pagar de Imposto de Renda, segundo a tabela
+		//Lembre que, se o salário for R$ 3002.00, a taxa que incide é de 8% apenas sobre R$ 1000.00, pois a faixa de
+		//salário que fica de R$ 0.00 até R$ 2000.00 é isenta de Imposto de Renda. No exemplo fornecido (abaixo), a taxa é
+		//de 8% sobre R$ 1000.00 + 18% sobre R$ 2.00, o que resulta em R$ 80.36 no total. O valor deve ser impresso com
+		//duas casas decimais.
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite seu salario");
+		double Salario = sc.nextDouble();
+		
+		double imposto;
+		if (Salario <= 2000.0) {
+			imposto = 0.0;
+		}
+		else if (Salario <= 3000.0) {
+			imposto = (Salario - 2000.0) * 0.08;
+		}
+		else if (Salario <= 4500.0) {
+			imposto = (Salario - 3000.0) * 0.18 + 1000.0 * 0.08;
+		}
+		else {
+			imposto = (Salario - 4500.0) * 0.28 + 1500.0 * 0.18 + 1000.0 * 0.08;
+		}
+
+		if (imposto == 0.0) {
+			System.out.println("Isento");
+		}
+		else {
+			System.out.printf("O seu imposto sera de R$ %.2f%n", imposto);
+		}
 		
 		sc.close();
 		
