@@ -12,7 +12,7 @@ public class Main {
 		//casas decimais conforme exemplos. Fórmula da área: area = π . raio2 Considere o valor de π = 3.14159//
 
  
-		Scanner sc = new Scanner(System.in);
+		/*Scanner sc = new Scanner(System.in);
 		
 		double A, B, raio, area;
 		
@@ -443,9 +443,26 @@ public class Main {
 		System.out.println("Diesel: " + diesel);
 		
 		
-		sc.close(); 
+		sc.close();
 		
+		// QUESTAO 12 - Leia um valor inteiro X (1 <= X <= 1000). Em seguida mostre os ímpares de 1 até X, um valor por linha, inclusive o 
+		// X, se for o caso
 	
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite seu valor inteiro");
+		int X = sc.nextInt();
+		
+		for (int i=1; i<=X; i++) {
+			if (i % 2 != 0) {
+				System.out.println(i);
+			}
+		}
+		
+		
+		sc.close();*/
+		
 	}
 
 }
