@@ -354,6 +354,98 @@ public class Main {
 		
 		sc.close();
 		
+		
+		// QUESTAO 9 - Escreva um programa que repita a leitura de uma senha até que ela seja válida. Para cada leitura de senha 
+		//incorreta informada, escrever a mensagem "Senha Invalida". Quando a senha for informada corretamente deve ser 
+		//impressa a mensagem "Acesso Permitido" e o algoritmo encerrado. Considere que a senha correta é o valor 2002.
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		System.out.println("Qual a senha?");
+		int Senha = sc.nextInt();
+		
+		while (Senha != 1010) {
+			System.out.println("Senha errada, digite novamente");
+			Senha = sc.nextInt();
+		}
+		
+		System.out.println("Senha corrreta, parabens");
+		
+		sc.close();
+		
+		// QUESTAO 10 -Escreva um programa para ler as coordenadas (X,Y) de uma quantidade indeterminada de pontos no sistema 
+		//cartesiano. Para cada ponto escrever o quadrante a que ele pertence. O algoritmo será encerrado quando pelo 
+		//menos uma de duas coordenadas for NULA (nesta situação sem escrever mensagem alguma)
+				
+		Scanner sc = new Scanner(System.in);
+		
+		
+		System.out.println("Escreva sua coordenada X");
+		double X = sc.nextDouble();
+		System.out.println("Escreva sua coordenada Y");
+		double Y = sc.nextDouble();
+			
+		while (X != 0 && Y != 0) {
+			if (X > 0 && Y > 0) {
+				System.out.println("O ponto ta no 1 quadrante");
+		}
+			else if (X < 0 && Y > 0) {
+				System.out.println("O ponto ta no 2 quadrante");
+		}
+			else if (X < 0 && Y < 0) {
+				System.out.println("O ponto ta no 3 quadrante");
+		}
+			else {
+				System.out.println("O ponto ta no 4 quadrante");
+				
+			}
+			X = sc.nextInt();
+			Y = sc.nextInt();
+		}
+			
+		sc.close();
+		
+		
+		// QUESTAO 11 - Um Posto de combustíveis deseja determinar qual de seus produtos tem a preferência de seus clientes. Escreva 
+		//um algoritmo para ler o tipo de combustível abastecido (codificado da seguinte forma: 1.Álcool 2.Gasolina 3.Diesel 
+		//4.Fim). Caso o usuário informe um código inválido (fora da faixa de 1 a 4) deve ser solicitado um novo código (até 
+		//que seja válido). O programa será encerrado quando o código informado for o número 4. Deve ser escrito a 
+		//Mensagem: "MUITO OBRIGADO" e a quantidade de clientes que abasteceram cada tipo de combustível, conforme 
+		//exemplo
+		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int alcool = 0;
+		int gasolina = 0;
+		int diesel = 0;
+		
+		int tipo = sc.nextInt();
+		
+		while (tipo != 4) {
+			if (tipo == 1) {
+				alcool = alcool + 1;
+			}
+			else if (tipo == 2) {
+				gasolina = gasolina + 1;
+			}
+			else if (tipo == 3) {
+				diesel = diesel + 1;
+			}
+			
+			tipo = sc.nextInt();
+		}
+
+		System.out.println("MUITO OBRIGADO");
+		System.out.println("Alcool: " + alcool);
+		System.out.println("Gasolina: " + gasolina);
+		System.out.println("Diesel: " + diesel);
+		
+		
+		sc.close(); 
+		
+	
 	}
 
 }
